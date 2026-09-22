@@ -29,7 +29,7 @@ namespace MapaDeConformidade.Services
 
             empresa.Nome = novaempresa.Nome;
             empresa.AtividadeEconomica = novaempresa.AtividadeEconomica;
-            empresa.DataCadastro = novaempresa.DataCadastro;
+            empresa.DataCadastro = DateOnly.FromDateTime(DateTime.Now);
 
             await _context.Empresas.AddAsync(empresa);
             await _context.SaveChangesAsync();
@@ -49,13 +49,12 @@ namespace MapaDeConformidade.Services
 
                 empresa.Nome = novaempresa.Nome;
                 empresa.AtividadeEconomica = novaempresa.AtividadeEconomica;
-                empresa.DataCadastro = novaempresa.DataCadastro;
                 await _context.SaveChangesAsync();
 
                 return "Empresa atualizado";
             }
 
-            return "Pais não encontrado";
+            return "Empresa não encontrado";
         }
 
         public async Task<string> DeleteEmpresa(int id)
