@@ -29,7 +29,7 @@ namespace MapaDeConformidade.Services
 
             evidencia.Descricao = novaevidencia.Descricao;
             evidencia.StatusValidacao = novaevidencia.StatusValidacao;
-            evidencia.DataRegistro = novaevidencia.DataRegistro;
+            evidencia.DataRegistro = DateOnly.FromDateTime(DateTime.Now);
 
             await _context.Evidencias.AddAsync(evidencia);
             await _context.SaveChangesAsync();
@@ -49,7 +49,6 @@ namespace MapaDeConformidade.Services
 
                 evidencia.Descricao = novaevidencia.Descricao;
                 evidencia.StatusValidacao = novaevidencia.StatusValidacao;
-                evidencia.DataRegistro = novaevidencia.DataRegistro;
                 await _context.SaveChangesAsync();
 
                 return "Evidência atualizada";
