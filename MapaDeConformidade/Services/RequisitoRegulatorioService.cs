@@ -22,7 +22,7 @@ namespace MapaDeConformidade.Services
         {
             RequisitoRegulatorio requisitoregulatorio = new RequisitoRegulatorio();
 
-            if (string.IsNullOrWhiteSpace(novorequisitoregulatorio.Titulo) || string.IsNullOrWhiteSpace(novorequisitoregulatorio.Descricao) || (novorequisitoregulatorio.Obrigatorio.Equals("sim", StringComparison.OrdinalIgnoreCase) || novorequisitoregulatorio.Obrigatorio.Equals("não", StringComparison.OrdinalIgnoreCase)
+            if (string.IsNullOrWhiteSpace(novorequisitoregulatorio.Titulo) || string.IsNullOrWhiteSpace(novorequisitoregulatorio.Descricao) || novorequisitoregulatorio.Obrigatorio.Equals("sim", StringComparison.OrdinalIgnoreCase) || novorequisitoregulatorio.Obrigatorio.Equals ("não", StringComparison.OrdinalIgnoreCase))
             {
                 return "Informe dados corretos, por gentileza";
             }
@@ -41,7 +41,7 @@ namespace MapaDeConformidade.Services
 
             if (requisitoregulatorio != null)
             {
-                if (string.IsNullOrWhiteSpace(novorequisitoregulatorio.Titulo) || string.IsNullOrWhiteSpace(novorequisitoregulatorio.Descricao) || (novorequisitoregulatorio.Obrigatorio.Equals("sim", StringComparison.OrdinalIgnoreCase) || novorequisitoregulatorio.Obrigatorio.Equals("não", StringComparison.OrdinalIgnoreCase)
+                if (string.IsNullOrWhiteSpace(novorequisitoregulatorio.Titulo) || string.IsNullOrWhiteSpace(novorequisitoregulatorio.Descricao) || novorequisitoregulatorio.Obrigatorio.Equals("sim", StringComparison.OrdinalIgnoreCase) || novorequisitoregulatorio.Obrigatorio.Equals("não", StringComparison.OrdinalIgnoreCase))
                 {
                     return "Informe dados corretos, por gentileza";
                 }

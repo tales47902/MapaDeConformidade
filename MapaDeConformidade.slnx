@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="MapaDeConformidade.Tests/MapaDeConformidade.Tests.csproj" Id="cfe1a55b-dc71-47dc-9eb9-eb17f4ff9614" />
   <Project Path="MapaDeConformidade/MapaDeConformidade.csproj" />
 </Solution>

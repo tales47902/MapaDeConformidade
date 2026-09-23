@@ -10,6 +10,6 @@
         public DateOnly DataCadastro { get; set; }
 
         public Pais pais { get; set; }
-        public SetorDTO setor { get; set; }
+        public Setor setor { get; set; }
     }
 }
