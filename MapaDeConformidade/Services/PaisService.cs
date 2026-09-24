@@ -22,7 +22,7 @@ namespace MapaDeConformidade.Services
         {
             Pais pais = new Pais();
 
-            if (string.IsNullOrWhiteSpace(novopais.Nome) || string.IsNullOrWhiteSpace(novopais.CodigoISO))
+            if (string.IsNullOrWhiteSpace(novopais.Nome) || string.IsNullOrWhiteSpace(novopais.CodigoISO) || novopais.CodigoISO.Length > 3)
             {
                 return "Informe dados corretos, por gentileza";
             }
